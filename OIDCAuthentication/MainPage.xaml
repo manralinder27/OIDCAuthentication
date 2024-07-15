@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OIDCAuthentication.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label 
+                Text="Token:"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Start" />
+
+            <Label 
+                    Text="{Binding Token}"
+                    TextColor="{StaticResource Primary}"
+                    FontSize="10"
+                    HorizontalOptions="Center" />
+
+            <Button Margin="100,20,100,20" 
+                    HorizontalOptions="Center"
+                    Command="{Binding CallApiCommand}"
+                    BackgroundColor="{StaticResource Secondary}"
+                    IsEnabled="{Binding IsNotBusy}"
+                    Text="Call API" TextColor="{StaticResource Primary}"/>
+
+            <Button Margin="100,20,100,20" 
+                    HorizontalOptions="Center"
+                    Command="{Binding LogoutCommand}"
+                    BackgroundColor="{StaticResource Secondary}"
+                    Text="LogOut" TextColor="{StaticResource Primary}"/>
+            
+            <!--<Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />-->
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
