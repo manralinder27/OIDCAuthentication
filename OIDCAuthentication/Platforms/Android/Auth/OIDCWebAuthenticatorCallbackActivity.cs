@@ -11,5 +11,5 @@ namespace OIDCAuthentication.Platforms.Android;
 
 public class OIDCWebAuthenticatorCallbackActivity : WebAuthenticatorCallbackActivity
 {
-    const string CALLBACK_SCHEME = "loadunload";
+    const string CALLBACK_SCHEME = "OIDCAuthentication";
 }
